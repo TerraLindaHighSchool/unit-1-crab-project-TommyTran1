@@ -11,6 +11,7 @@ public class CrabWorld extends World
         super(560, 560, 1);
         prepare();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
