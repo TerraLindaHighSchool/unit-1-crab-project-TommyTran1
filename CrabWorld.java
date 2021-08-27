@@ -36,5 +36,7 @@ public class CrabWorld extends World
         addObject(worm7,399,50);
         Worm worm8 = new Worm();
         addObject(worm8,160,31);
+        Lobster lobster = new Lobster();
+        addObject(lobster,400,375);
     }
 }
