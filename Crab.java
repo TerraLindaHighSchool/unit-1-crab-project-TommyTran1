@@ -2,8 +2,9 @@ import greenfoot.*;
 
 /**
  * This class defines a crab and controls the crab
+ * 
  * @Author Tommy Tran
- * @Version 8/26/2021
+ * @Version 8/30/2021
  */
 public class Crab extends Actor
 {
@@ -14,7 +15,7 @@ public class Crab extends Actor
         checkKeyPress();
         onCollision();   
     }
-    
+
     //turns the crab on the edge
     public void turnAtEdge()
     {
@@ -24,28 +25,30 @@ public class Crab extends Actor
         }
     }
 
-    // Checks for user key presses so users can turn the Crab private void
+    // Checks for user key presses so users can move the Crab private void
     //checkKeyPress()
     public void checkKeyPress()
     {
-        
-        
+        //moves the crab right by an int of 3
         if(Greenfoot.isKeyDown("right"))
         {
-             setLocation(getX() + 3, getY());
-            
+            setLocation(getX() + 3, getY());
+
         }
 
+        //moves the crab left by an int of 3
         if(Greenfoot.isKeyDown("left"))
         {
             setLocation(getX() - 3, getY());
         }
-        
+
+        //moves the crab up by an int of 3
         if(Greenfoot.isKeyDown("up"))
         {
             setLocation(getX(), getY() - 3);
         }
-        
+
+        //moves the crab down by an int of 3
         if(Greenfoot.isKeyDown("down"))
         {
             setLocation(getX(), getY() + 3);
@@ -62,15 +65,15 @@ public class Crab extends Actor
             Greenfoot.playSound("slurp.wav");
 
         }
-        
+
         //win condition
-         if(getWorld().getObjects(Worm.class).size() == 0)
-            {
-                Greenfoot.setWorld(new WinSplash());
-                Greenfoot.playSound("fanfare.wav");
-                Greenfoot.stop();
-            }
-            
+        if(getWorld().getObjects(Worm.class).size() == 0)
+        {
+            Greenfoot.setWorld(new WinSplash());
+            Greenfoot.playSound("fanfare.wav");
+            Greenfoot.stop();
+        }
+
         //losing condition
         if(isTouching(Lobster.class))
         {
@@ -78,11 +81,5 @@ public class Crab extends Actor
             Greenfoot.stop();
         }
     }
-    
-    //Gets the x coordinate of the actor (crab)
-    
-    
-    
-  
-}
 
+}

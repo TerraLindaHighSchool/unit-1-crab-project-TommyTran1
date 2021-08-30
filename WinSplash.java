@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WinSplash here.
+ * Displays and plays a sound for win. Activated after all worms are deleted
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author Tommy Tran 
+ * @Version 08/30/2021
  */
 public class WinSplash extends World
 {

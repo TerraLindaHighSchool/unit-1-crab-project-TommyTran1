@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Controls the lobster, lobster is an enemy
  * 
- * @Tommy Tran 
- * @version 8/27/2021
+ * @Author Tommy Tran
+ * @Version 8/30/2021
  */
 public class Lobster extends Actor
 {
