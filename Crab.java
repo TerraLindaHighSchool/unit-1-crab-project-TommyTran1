@@ -9,7 +9,7 @@ public class Crab extends Actor
 {
     public void act()
     {
-        move(3);
+        move(0);
         turnAtEdge();
         checkKeyPress();
         onCollision();   
@@ -28,19 +28,27 @@ public class Crab extends Actor
     //checkKeyPress()
     public void checkKeyPress()
     {
+        
+        
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+             setLocation(getX() + 3, getY());
+            
         }
 
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            setLocation(getX() - 3, getY());
         }
         
         if(Greenfoot.isKeyDown("up"))
         {
-            Greenfoot.delay(60);
+            setLocation(getX(), getY() - 3);
+        }
+        
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY() + 3);
         }
     }
 
@@ -70,5 +78,11 @@ public class Crab extends Actor
             Greenfoot.stop();
         }
     }
+    
+    //Gets the x coordinate of the actor (crab)
+    
+    
+    
+  
 }
 
