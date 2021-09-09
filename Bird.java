@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @Author Tommy Tran
  * @Version 8/30/2021
  */
-public class Lobster extends Actor
+public class Bird extends Actor
 {
     /**
      * Act - do whatever the Lobster wants to do. This method is called whenever

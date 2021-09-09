@@ -2,11 +2,12 @@ import greenfoot.*;
 
 /**
  * This class defines a crab and controls the crab
- * 
+ 
+   * 
  * @Author Tommy Tran
  * @Version 8/30/2021
  */
-public class Crab extends Actor
+public class Fish extends Actor
 {
     public void act()
     {
@@ -59,15 +60,15 @@ public class Crab extends Actor
     public void onCollision()
     {
         //Eating/removing worm code
-        if(isTouching(Worm.class))
+        if(isTouching(Microbe.class))
         {
-            removeTouching(Worm.class);
+            removeTouching(Microbe.class);
             Greenfoot.playSound("slurp.wav");
 
         }
 
         //win condition
-        if(getWorld().getObjects(Worm.class).size() == 0)
+        if(getWorld().getObjects(Microbe.class).size() == 0)
         {
             Greenfoot.setWorld(new WinSplash());
             Greenfoot.playSound("fanfare.wav");
@@ -75,7 +76,7 @@ public class Crab extends Actor
         }
 
         //losing condition
-        if(isTouching(Lobster.class))
+        if(isTouching(Bird.class))
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.stop();
