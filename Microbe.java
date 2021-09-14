@@ -8,6 +8,7 @@ import java.lang.Math.*; // (Math)
  */
 public class Microbe extends Actor
 {
+    int delay = 1000;
     /**
      * Act - do whatever the Microbe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,22 +29,23 @@ public class Microbe extends Actor
 
     public void replicate()
     {
-        int delay = 100;
-        delay--;
-        if (delay <= 50) {
+        if (delay <= 0) 
+        {
+            if(isTouching(Microbe.class))
             {
-                if(isTouching(Microbe.class) == true)
+                if(getWorld().getObjects(Microbe.class).size() <= 50)
                 {
-                    if(getWorld().numberOfObjects() == 50); 
-                    {
-                        Microbe microbe2 = new Microbe();
-                        getWorld().addObject(microbe2, getX(), getY());
+                    Microbe microbe2 = new Microbe();
+                    getWorld().addObject(microbe2, getX(), getY());
+                    delay = 1000;
 
-                    }
-                }  
-
-            }
+                }
+            }  
         }
+        if (delay > 0)
+        {
+            delay--;
 
+        }
     }
 }

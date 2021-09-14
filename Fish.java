@@ -59,6 +59,12 @@ public class Fish extends Actor
     // Check for collisions with other subjects
     public void onCollision()
     {
+        int score = 0;
+        score++;
+        if(getWorld().getObjects(Microbe.class).size() == 0)
+        {
+            System.out.print(score);
+        }
         //Eating/removing worm code
         if(isTouching(Microbe.class))
         {
