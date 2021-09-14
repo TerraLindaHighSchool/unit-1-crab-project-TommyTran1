@@ -8,7 +8,7 @@ import java.lang.Math.*; // (Math)
  */
 public class Microbe extends Actor
 {
-    int delay = 1000;
+    int delay = 450;
     /**
      * Act - do whatever the Microbe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,14 +19,17 @@ public class Microbe extends Actor
         turnAtEdge();
         replicate();
     }
-
+    
+    //turns the actor at edge
     public void turnAtEdge()
     {
         if(isAtEdge()){
             turn((int) (10 + (Math.random() * 150)));
         }
     }
-
+    
+    //When microbes collide with eachother and the delay timer is on zero,
+    //it will trigger a replication act that duplicates the microbe 
     public void replicate()
     {
         if (delay <= 0) 
@@ -37,7 +40,7 @@ public class Microbe extends Actor
                 {
                     Microbe microbe2 = new Microbe();
                     getWorld().addObject(microbe2, getX(), getY());
-                    delay = 1000;
+                    delay = 450;
 
                 }
             }  

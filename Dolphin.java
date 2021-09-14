@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Dolphin here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tommy Tran
+ * @version 9/14
  */
 public class Dolphin extends Actor
 {
@@ -19,15 +19,17 @@ public class Dolphin extends Actor
         turnAtEdge();
     }
 
+    //Handles any collision with objects the Dolphin might have.
     public void onCollision() 
     {
         if(isTouching(Bird.class))
         {
             removeTouching(Bird.class);
-            Greenfoot.playSound("slurp.wav");
+            Greenfoot.playSound("eat.mp3");
         }
     }
 
+    //handles when and how the Dolphin interacts with edge
     public void turnAtEdge()
     {
         if(isAtEdge()) 

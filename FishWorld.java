@@ -3,13 +3,17 @@ import java.lang.Math.*;
 
 public class FishWorld extends World
 {
+    GreenfootSound backgroundMusic = new GreenfootSound("music.mp3");
+   
     /**
      * Create the fish World (the ocean). Our world has a size 
      * of 1600,880 cells, where every cell is just 1 pixel.
      */
     public FishWorld() 
     {
+        
         super(1000, 880, 1);
+        backgroundMusic.playLoop();
         prepare();
     }
 
