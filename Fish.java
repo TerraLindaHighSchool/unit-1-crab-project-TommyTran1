@@ -2,8 +2,8 @@ import greenfoot.*;
 
 /**
  * This class defines a crab and controls the crab
- 
-   * 
+
+ * 
  * @Author Tommy Tran
  * @Version 8/30/2021
  */
@@ -64,7 +64,6 @@ public class Fish extends Actor
         {
             removeTouching(Microbe.class);
             Greenfoot.playSound("slurp.wav");
-
         }
 
         //win condition

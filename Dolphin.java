@@ -14,6 +14,26 @@ public class Dolphin extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        move(2);
+        onCollision();
+        turnAtEdge();
     }
+
+    public void onCollision() 
+    {
+        if(isTouching(Bird.class))
+        {
+            removeTouching(Bird.class);
+            Greenfoot.playSound("slurp.wav");
+        }
+    }
+
+    public void turnAtEdge()
+    {
+        if(isAtEdge()) 
+        {
+            turn((int) (10 + (Math.random() * 150)));   
+        }
+    }
+
 }

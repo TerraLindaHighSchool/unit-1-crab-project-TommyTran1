@@ -26,7 +26,12 @@ public class FishWorld extends World
             Microbe microbe = new Microbe();
             addObject(microbe,((int)(Math.random()*1000)),((int)(Math.random()*880)));
         }
+        for(int i = 0 ; i < 2; i++) 
+        {
+            Dolphin dolphin = new Dolphin();
+            addObject(dolphin,((int)(Math.random()*1000)),((int)(Math.random()*880)));
+        }
         Bird bird = new Bird();
-        addObject(bird,400,375);
+        addObject(bird,((int)(Math.random()*1000)),((int)(Math.random()*880)));
     }
 }

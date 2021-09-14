@@ -34,7 +34,7 @@ public class Microbe extends Actor
             {
                 if(isTouching(Microbe.class) == true)
                 {
-                    if(getWorld().numberOfObjects() == 30); 
+                    if(getWorld().numberOfObjects() == 50); 
                     {
                         Microbe microbe2 = new Microbe();
                         getWorld().addObject(microbe2, getX(), getY());
